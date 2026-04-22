@@ -11,12 +11,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    env:
-      RELEASE_KEYSTORE_BASE64: ${{ secrets.RELEASE_KEYSTORE_BASE64 }}
-      KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
-      KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
-      KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-
     steps:
       - uses: actions/checkout@v4
 
@@ -26,9 +20,9 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Decode keystore
+      - name: Generate release keystore
         run: |
-          echo "$RELEASE_KEYSTORE_BASE64" | base64 -d > app/release.keystore
+          keytool -genkeypair -v -keystore app/release.keystore -alias release -keyalg RSA -keysize 2048 -validity 10000 -storepass ChurnPredictor2026 -keypass ChurnPredictor2026 -dname "CN=ChurnPredictor,O=jnetai"
 
       - name: Make gradlew executable
         run: chmod +x gradlew
@@ -36,14 +30,11 @@ jobs:
       - name: Build release APK
         run: ./gradlew assembleRelease
 
-      - name: Rename APK
-        run: mv app/build/outputs/apk/release/app-release-unsigned.apk ChurnPredictor.apk || mv app/build/outputs/apk/release/app-release.apk ChurnPredictor.apk || true
-
-      - name: Create GitHub Release
+      - name: Upload APK to Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v1.0.0
           name: ChurnPredictor v1.0.0
-          files: ChurnPredictor.apk
+          files: app/build/outputs/apk/release/app-release.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
