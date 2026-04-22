@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material 3 Dark Theme Colors -->
+    <color name="md_theme_primary">#D0BCFF</color>
+    <color name="md_theme_onPrimary">#381E72</color>
+    <color name="md_theme_primaryContainer">#4F378B</color>
+    <color name="md_theme_onPrimaryContainer">#EADDFF</color>
+    <color name="md_theme_secondary">#CCC2DC</color>
+    <color name="md_theme_onSecondary">#332D41</color>
+    <color name="md_theme_secondaryContainer">#4A4458</color>
+    <color name="md_theme_onSecondaryContainer">#E8DEF8</color>
+    <color name="md_theme_tertiary">#EFB8C8</color>
+    <color name="md_theme_onTertiary">#492532</color>
+    <color name="md_theme_tertiaryContainer">#633B48</color>
+    <color name="md_theme_onTertiaryContainer">#FFD8E4</color>
+    <color name="md_theme_error">#F2B8B5</color>
+    <color name="md_theme_onError">#601410</color>
+    <color name="md_theme_errorContainer">#8C1D18</color>
+    <color name="md_theme_onErrorContainer">#F9DEDC</color>
+    <color name="md_theme_surface">#141218</color>
+    <color name="md_theme_onSurface">#E6E0E9</color>
+    <color name="md_theme_surfaceVariant">#49454F</color>
+    <color name="md_theme_onSurfaceVariant">#CAC4D0</color>
+    <color name="md_theme_outline">#938F99</color>
+    <color name="md_theme_outlineVariant">#49454F</color>
+
+    <!-- Risk level colors -->
+    <color name="risk_critical">#FFFF4444</color>
+    <color name="risk_high">#FFFF9800</color>
+    <color name="risk_medium">#FFFFEB3B</color>
+    <color name="risk_low">#FF4CAF50</color>
+
+    <!-- Card background -->
+    <color name="card_bg">#1E1B2E</color>
+</resources>

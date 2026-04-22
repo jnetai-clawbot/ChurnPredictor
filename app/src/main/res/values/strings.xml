@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ChurnPredictor</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="customers">Customers</string>
+    <string name="interactions">Interactions</string>
+    <string name="retention">Retention</string>
+    <string name="export_data">Export</string>
+    <string name="about">About</string>
+    <string name="add_customer">Add Customer</string>
+    <string name="log_interaction">Log Interaction</string>
+    <string name="customer_name">Name</string>
+    <string name="customer_email">Email</string>
+    <string name="signup_date">Signup Date</string>
+    <string name="plan_type">Plan Type</string>
+    <string name="interaction_type">Interaction Type</string>
+    <string name="description">Description</string>
+    <string name="date">Date</string>
+    <string name="feedback_score">Feedback Score (1-5)</string>
+    <string name="total_customers">Total Customers</string>
+    <string name="critical_risk">Critical</string>
+    <string name="high_risk">High</string>
+    <string name="medium_risk">Medium</string>
+    <string name="low_risk">Low</string>
+    <string name="avg_risk_score">Avg Risk</string>
+    <string name="retention_rate">Retention</string>
+    <string name="check_for_updates">Check for Updates</string>
+    <string name="share_app">Share</string>
+    <string name="version_info">Version</string>
+    <string name="export_json">Export as JSON</string>
+    <string name="share_json">Share JSON</string>
+    <string name="notes">Notes</string>
+    <string name="delete">Delete</string>
+    <string name="risk_score">Score</string>
+</resources>

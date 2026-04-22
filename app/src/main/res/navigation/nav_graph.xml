@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.jnetai.churnpredictor.ui.DashboardFragment"
+        android:label="@string/dashboard" />
+
+    <fragment
+        android:id="@+id/customersFragment"
+        android:name="com.jnetai.churnpredictor.ui.CustomersFragment"
+        android:label="@string/customers" />
+
+    <fragment
+        android:id="@+id/interactionsFragment"
+        android:name="com.jnetai.churnpredictor.ui.InteractionsFragment"
+        android:label="@string/interactions" />
+
+    <fragment
+        android:id="@+id/retentionFragment"
+        android:name="com.jnetai.churnpredictor.ui.RetentionFragment"
+        android:label="@string/retention" />
+
+    <fragment
+        android:id="@+id/exportFragment"
+        android:name="com.jnetai.churnpredictor.ui.ExportFragment"
+        android:label="@string/export_data" />
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.jnetai.churnpredictor.ui.AboutFragment"
+        android:label="@string/about" />
+</navigation>

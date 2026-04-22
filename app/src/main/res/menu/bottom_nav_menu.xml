@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/dashboardFragment"
+        android:title="@string/dashboard"
+        android:icon="@android:drawable/ic_menu_agenda" />
+    <item android:id="@+id/customersFragment"
+        android:title="@string/customers"
+        android:icon="@android:drawable/ic_menu_myplaces" />
+    <item android:id="@+id/interactionsFragment"
+        android:title="@string/interactions"
+        android:icon="@android:drawable/ic_menu_recent_history" />
+    <item android:id="@+id/retentionFragment"
+        android:title="@string/retention"
+        android:icon="@android:drawable/ic_menu_manage" />
+    <item android:id="@+id/exportFragment"
+        android:title="@string/export_data"
+        android:icon="@android:drawable/ic_menu_save" />
+    <item android:id="@+id/aboutFragment"
+        android:title="@string/about"
+        android:icon="@android:drawable/ic_menu_info_details" />
+</menu>
