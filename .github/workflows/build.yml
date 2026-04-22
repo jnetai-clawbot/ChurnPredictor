@@ -37,16 +37,14 @@ jobs:
       - name: Build release APK
         run: ./gradlew assembleRelease
 
-      - name: Rename APK
-        run: |
-          mv app/build/outputs/apk/release/app-release.apk ChurnPredictor.apk || mv app/build/outputs/apk/release/*.apk ChurnPredictor.apk || true
-          ls -la *.apk
+      - name: Find APK
+        run: echo "APK_PATH=$(find app/build/outputs/apk -name '*.apk' | head -1)" >> $GITHUB_ENV
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v1.0.0
           name: ChurnPredictor v1.0.0
-          files: ChurnPredictor.apk
+          files: ${{ env.APK_PATH }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

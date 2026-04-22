@@ -6,12 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
+import androidx.lifecycle.ViewModelProvider
 import com.jnetai.churnpredictor.databinding.FragmentRetentionBinding
 import com.jnetai.churnpredictor.model.RiskLevel
 import com.jnetai.churnpredictor.util.ChurnCalculator
-import kotlinx.coroutines.launch
 
 class RetentionFragment : Fragment() {
 

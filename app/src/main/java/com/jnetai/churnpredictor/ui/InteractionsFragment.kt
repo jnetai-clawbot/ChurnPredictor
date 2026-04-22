@@ -8,8 +8,9 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
+import androidx.lifecycle.ViewModelProvider
 import com.jnetai.churnpredictor.R
 import com.jnetai.churnpredictor.databinding.FragmentInteractionsBinding
 import com.jnetai.churnpredictor.databinding.DialogAddInteractionBinding

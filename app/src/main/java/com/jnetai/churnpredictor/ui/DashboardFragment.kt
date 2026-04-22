@@ -6,12 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
+import androidx.lifecycle.ViewModelProvider
 import com.jnetai.churnpredictor.R
 import com.jnetai.churnpredictor.databinding.FragmentDashboardBinding
 import com.jnetai.churnpredictor.model.RiskLevel
-import kotlinx.coroutines.launch
 
 class DashboardFragment : Fragment() {
 
