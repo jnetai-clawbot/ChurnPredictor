@@ -38,7 +38,7 @@ class CustomersFragment : Fragment() {
         )
         binding.recyclerCustomers.adapter = adapter
 
-        viewLifecycleOwner.lifecycleScopeLaunchCollectors {
+        viewLifecycleOwner.lifecycleScope.launch {
             viewModel.customers.collect { customers ->
                 adapter.submitList(customers)
             }
@@ -92,11 +92,5 @@ class CustomersFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    private fun androidx.lifecycle.LifecycleOwner.lifecycleScopeLaunchCollectors(block: suspend () -> Unit) {
-        androidx.lifecycle.lifecycleScope.launch {
-            block()
-        }
     }
 }
